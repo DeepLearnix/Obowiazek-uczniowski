@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>970,4473</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>774,4838</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -142,9 +142,10 @@
       <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
       <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Obowiazek Uczniowski" sap:VirtualizedContainerService.HintSize="980,4408" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Obowiazek Uczniowski" sap:VirtualizedContainerService.HintSize="784,4773" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_students" />
     </Sequence.Variables>
@@ -153,7 +154,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Get Students Data" sap:VirtualizedContainerService.HintSize="918,960" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Get Students Data" sap:VirtualizedContainerService.HintSize="722,960" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,19 +201,19 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_students]" DisplayName="For Each Row in dt_students" sap:VirtualizedContainerService.HintSize="918,2423" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_students]" DisplayName="For Each Row in dt_students" sap:VirtualizedContainerService.HintSize="722,2788" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Work With Every Student" sap:VirtualizedContainerService.HintSize="688,2225" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Work With Every Student" sap:VirtualizedContainerService.HintSize="688,2590" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[CurrentRow(&quot;Status&quot;).Equals(&quot;Wysłano&quot;)]" sap:VirtualizedContainerService.HintSize="626,2137" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[CurrentRow(&quot;Status&quot;).Equals(&quot;Wysłano&quot;)]" sap:VirtualizedContainerService.HintSize="626,2502" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -230,7 +231,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,1721" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,2086" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -454,6 +455,27 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
+                  <umab:ExchangeApplicationCard ApplicationId="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" TenantId="{x:Null}" Account="Please select an account" DisplayName="Use Outlook 365" sap:VirtualizedContainerService.HintSize="530,365" UseConnectionService="False">
+                    <umab:ExchangeApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,104">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </ActivityAction>
+                    </umab:ExchangeApplicationCard.Body>
+                    <umab:ExchangeApplicationCard.EmailAddress>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </umab:ExchangeApplicationCard.EmailAddress>
+                  </umab:ExchangeApplicationCard>
                   <umab:ExchangeApplicationCard SharedMailbox="{x:Null}" Account="michal.listek@ubiquora.com" ConnectionAccountName="michal.listek@ubiquora.com" ConnectionId="f5487d5a-d6d0-4d04-a3db-9992873f9f28" DisplayName="Use Outlook 365" EmailAddress="michal.listek@ubiquora.com" sap:VirtualizedContainerService.HintSize="530,772" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_2" UseConnectionService="False">
                     <umab:ExchangeApplicationCard.ApplicationId>
                       <InArgument x:TypeArguments="x:String">
@@ -525,7 +547,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Sequence DisplayName="Update Status" sap:VirtualizedContainerService.HintSize="918,937" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence DisplayName="Update Status" sap:VirtualizedContainerService.HintSize="722,937" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

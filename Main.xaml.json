@@ -1,0 +1,21 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_studentsFilePath",
+      "DisplayName": "in_studentsFilePath",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "C:\\Users\\SPMontessori\\Downloads\\RPA\\Obowiazek Szkolny\\lista-uczniow.xlsx",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}
